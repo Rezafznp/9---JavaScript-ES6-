@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <style>
+        img {
+            width: 500px;
+            height: 300px;
+        }
+
+        body {
+            background-color: gainsboro;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Image Picker</legend>
+        <h1>Pilih Negara</h1>
+        <select id="selectCountry" onchange="berubah()">
+            <option value="usa">USA</option>
+            <option value="indonesia">Indonesia</option>
+            <option value="japan">Japan</option>
+            <option value="russia">Russia</option>
+            <option value="germany">Germany</option>
+            <option value="thailand">Thailand</option>
+        </select>
+        <br> 
+        <br>
+        <div id="gambar" >
+            <img id="image" src="assets/usa.png">
+        </div>
+    </fieldset>
+
+    <script>
+        const selectCountry = document.getElementById("selectCountry");
+        const gambar = document.getElementById("gambar")
+
+        function berubah() {
+            if (selectCountry.value == "usa") {
+                document.getElementById("image").src="assets/usa.png";
+                alert("ini adalah bendera Amerika Serikat")
+            }
+
+            else if (selectCountry.value == "indonesia") {
+                document.getElementById("image").src="assets/indonesia.jpg";
+                alert("ini adalah bendera Indonesia")
+            }
+
+            else if (selectCountry.value == "japan") {
+                document.getElementById("image").src="assets/japan.png";
+                alert("ini adalah bendera Jepang")
+            }
+
+            else if (selectCountry.value == "russia") {
+                document.getElementById("image").src="assets/russia.png";
+                alert("ini adalah bendera Russia")
+            }
+
+            else if (selectCountry.value == "thailand") {
+                document.getElementById("image").src="assets/thailand.png";
+                alert("ini adalah bendera Thailand")
+            }
+
+            else {
+                document.getElementById("image").src="assets/germany.png"
+                alert("ini adalah bendera Jerman")
+            }
+        }
+    </script>
+</body>
+</html>

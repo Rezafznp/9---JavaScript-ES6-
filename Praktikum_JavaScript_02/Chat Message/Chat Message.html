@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wassup</title>
+
+    <style>
+        #cetakDisini{
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Aplikasi Chatting</legend>
+
+        <div id="cetakDisini"></div>
+
+        <input type="text" id="ketik" placeholder="Ketik pesan">
+        <button onclick="cetakPesan()">Kirim</button>
+
+
+        <script>
+            function cetakPesan() {
+                const hasilKetikan = document.getElementById("ketik").value;
+                document.getElementById("cetakDisini").innerHTML += `<p>${hasilKetikan}</p>`;
+            }
+        </script>
+    </fieldset>
+</body>
+</html>
